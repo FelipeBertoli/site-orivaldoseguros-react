@@ -1,0 +1,33 @@
+.input-label {
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  padding-left: .3rem;
+}
+
+.input-label-required {
+  color: red;
+  padding-left: 2px;
+  font-weight: 200;
+}
+
+
+.icon-text {
+  display: inline-flex;
+  text-align: end;
+  align-items: center;
+  gap: 1vw;
+  color: var(--color-primary);
+  font-size: large;
+}
+
+.icon-text span {
+  font-style: italic;
+  text-align: justify;  
+}
+
+.icon-text b {
+  color: var(--color-primary);
+  font-weight: 900;
+}

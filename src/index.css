@@ -1,0 +1,230 @@
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+:root {
+/* Cores principais */
+--color-primary: #d5bb6f;
+--color-primary-hover: #bca458;
+--color-primary-active: #a18c47;
+
+/* Cores secundárias */
+--color-secondary: #b2aa99; 
+--color-secondary-hover: #958e80;  
+--color-secondary-active: #b2aa99; 
+
+/* Fundo */
+ --color-background: #2c3650; 
+--color-background-alt: #3a4769;
+--color-background-soft: #48567a; 
+--color-background-contrast: #1f2537; 
+
+/* Textos */
+--color-text-main: #f0f0f0;
+--color-text-main-hover: #ffffff;
+--color-grey: #b0b0b0; 
+--color-text-secondary: #cccccc;
+--color-placeholder: #999999; 
+
+/* Links */
+--color-link: #d5bb6f;
+--color-link-hover: #a18c47;
+
+/* Feedback */
+--color-success: #00DFA2; 
+--color-attention: #FF8C00; 
+--color-error: #EF476F;
+--color-highlight: #6F42C1; 
+
+  --font-title-logo:  'Merriweather', serif;
+  --font-subtitle-logo:  'Merriweather', serif;
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Inter', 'Lato', sans-serif;
+  --font-code: 'JetBrains Mono', 'Fira Code', monospace;
+
+
+  --border: .6px solid #dcdcdc;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+  --input-padding: 7px 8px;
+  --action-width: 20rem;
+  --transition: all .4s ease-in-out;
+    --header-height: 8vh;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#btn{
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+}
+
+ .open #btn{
+  left: 0%;
+}
+
+* {
+  box-sizing: border-box;
+  transition: var(--transition);
+  margin: 0;
+  padding: 0;
+}
+
+[data-theme="dark"] {
+  --color-background: #000000;            /* Fundo principal - body */
+  --color-background-alt: #0a0a0a;        /* Fundo alternativo - sidebar, menus, containers, cards e seções secundárias */
+  --color-background-soft: #111111;       /* Fundo suave para destaques sutis - separadores visuais, linhas de tabelas cards e grids */
+  --color-background-contrast: #1a1a1a; /* Contraste um pouco mais claro que o soft - modais, menus suspensos, dropdows, elementos que precisam de destaque */
+
+  --color-text-main: #FFFFFF; /* Branco */
+  --color-text-main-hover: #0A0A0A; /* Branco */
+  --color-text-secondary: #B0B0B0; /* Cinza claro */
+  --border: 0.6px solid #2a2a2a;   /* cinza bem escuro */
+
+}
+
+i[class^="fi"],
+i[class*=" fi"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*#region Textos*/
+
+/* ----- Estilos de Títulos ----- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-main);
+  margin: 0;
+  margin-bottom: .5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 400;
+
+}
+
+/* ----- Estilos de Parágrafos e Texto ----- */
+p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+span, label {
+  font-size: 16px;
+}
+
+small {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+span {
+  font-family: var(--font-body);
+}
+
+strong, b {
+  font-weight: bold;
+  color: var(--color-text-main);
+}
+
+em, i {
+  font-style: italic;
+}
+
+code {
+  font-family: var(--font-code);
+  background-color: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/*#endregion*/
+
+.none-radius {
+  border-radius: 0;
+}
+
+.small-radius {
+  border-radius: var(--border-radius-sm);
+}
+
+.medium-radius {
+  border-radius: var(--border-radius-md);
+}
+
+.large-radius {
+  border-radius: var(--border-radius-lg);
+}
+
+.round-radius {
+  border-radius: 20rem;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.contact-form-group-row {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 576px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+}
